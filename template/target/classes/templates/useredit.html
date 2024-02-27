@@ -1,0 +1,30 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+	<center>
+		<form th:action="@{/admin/updateuser}" method="post">
+
+			<table>
+				<input type="hidden" name="id" th:value="${userinfo.id}">
+				<tr>
+					<td>Name*</td>
+					<td> <input type="text" name="name" th:value="${userinfo.name}"> </td>
+				</tr>
+				<tr>
+					<td>Email*</td>
+					<td> <input type="text" name="email" th:value="${userinfo.email}"> </td>
+				</tr>
+				<tr>
+					<td>File*</td>
+					<td> <input type="file" name="file" th:value="${userinfo.file}"> </td>
+				</tr>
+
+			</table>
+
+			<input type="submit">
+		</form>
+	</center>
+</body>
+
+</html>

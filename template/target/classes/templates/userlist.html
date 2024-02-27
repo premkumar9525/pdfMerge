@@ -1,0 +1,35 @@
+<html>
+<style>
+	table,
+	th,
+	td {
+		border: 1px solid black;
+	}
+</style>
+
+<body>
+
+	<center>
+
+		<table>
+
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>File</th>
+			</tr>
+			<tr th:each="ulist:${list}">
+				<td th:text="${ulist.id}"></td>
+				<td th:text="${ulist.name}"></td>
+				<td th:text="${ulist.email}"></td>
+				<td><img th:src="@{/images/}+${ulist.file}" alt="" style="height: 112px; width: 112px;"></td>
+				
+				<td><a th:href="@{'editUserById/'}+${ulist.id}">Edit</a></td>
+				<td><a th:href="@{'deleteUserById/'}+${ulist.id}">Delete</a></td>
+			</tr>
+		</table>
+	</center>
+</body>
+
+</html>

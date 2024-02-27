@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Bootstrap Example</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+	<center>
+
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+				<form action="savepdf" method="post" enctype="multipart/form-data">
+					  <div class="from-group">
+						  <labe>Upload File 1</labe>
+						  <input type="file" class="form-control" name="file1">
+					  </div>
+				
+						<div class="from-group">
+							 <labe>Upload File 2</labe>
+						  <input type="file" class="form-control" name="file2">
+					  </div>
+					  
+					  	<div class="from-group">
+							<button type="submit" class="btn btn-primary btn-block">Merge Pdf</button>
+					  </div>
+					
+						
+					</table>
+				</form>
+
+			</div>
+			<div class="col-sm-4">
+				<a th:href="@{mergepdf}" type="submit" class="btn btn-primary">Download Merge PDF</a>
+			</div>
+
+		</div>
+	</center>
+</body>
+
+</html>
